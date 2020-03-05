@@ -1,4 +1,4 @@
-# ADM TSC Tools-ForOctane
+# ADM TSC Tools- For ALM Octane
 __Tools for ALM Octane__
 In this repositorie, you will find example macros and utiltiies to help you better manager your data for day to day repetitive tasks. 
 * 1 Add Users to Shared Space - allows to to connect to ALM QC and extract users from a project into excel and import into ALM Octane Shared Space. 
