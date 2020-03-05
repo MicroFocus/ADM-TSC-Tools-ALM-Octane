@@ -1,5 +1,5 @@
 # ADM TSC Tools for ALM Octane
-@Octane
+# @Octane
 __Description:__
 
 __In this repository, you will find examples of Excel macros and VB utiltiies to help you better manager your data for day to day repetitive tasks.__
