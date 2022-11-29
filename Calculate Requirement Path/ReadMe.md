@@ -1,4 +1,4 @@
-Calculate Requirement Path
+# Calculate Requirement Path
 
 It's not yet possible to access the full Requirement path when generating Document Reports. This utility calculates the short (based on 2 digit numerical position) path and long path (based on Requirement name) and updates the values to 2 user defined fields. These fields can then be used to generate the document report based on your folder structure.
 
