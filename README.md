@@ -9,3 +9,4 @@ __In this repository, you will find examples of Excel macros and VB utiltiies to
 * 3 . __List Users From Shared Space__ -  Excel macro to export users from ALM Octane into Excel worksheet. 
 * 4 . __Module Count__ - Excel macro to export ALM Octane entitites to Excel worksheet. 
 * 5 . __Calculate Requirement Path__ - Calculates the short and long path of the Requirements structure. These paths can then be used to generate the document report based on your folder structure.
+* 6 . __Copy Requirement Folders__ - Select a specific requirement folder, and it will recreate the child structure (folders and requirement documents) in another specified folder.
