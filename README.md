@@ -10,3 +10,5 @@ __In this repository, you will find examples of Excel macros and VB utiltiies to
 * 4 . __Module Count__ - Excel macro to export ALM Octane entitites to Excel worksheet. 
 * 5 . __Calculate Requirement Path__ - Calculates the short and long path of the Requirements structure. These paths can then be used to generate the document report based on your folder structure.
 * 6 . __Copy Requirement Folders__ - Select a specific requirement folder, and it will recreate the child structure (folders and requirement documents) in another specified folder.
+* 6 . __Excel License Report__ - Example file to show the process of displaying and graphing the SaaS concurrent usage data in Excel.
+* 6 . __Excel Run Report__ - Excel file demonstrating how you can create a run report with attachment download links for the run steps.
