@@ -1,0 +1,57 @@
+{
+	"info": {
+		"_postman_id": "28aa7283-8a00-4a15-adf8-5ea90f5fe389",
+		"name": "Authentication",
+		"description": "Select the \"SaaS ValueEdge\" environment and update the following fields:\n\n- url - in the format: [https://almoctane-xyz.saas.microfocus.com](https://almoctane-eur.saas.microfocus.com/)\n    \n- Generate the API Key and Secret and populate the relevant fields\n    \n- Execute \"Sign-in\" to authenticate.\n    \n- Use \"Sign-out\" once you're ready to logout.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7964502",
+		"_collection_link": "https://almrest.postman.co/workspace/VE-examples-(shared)~8cb9ab17-4fa2-4c6a-98e7-be6f19d9bb1b/collection/7964502-28aa7283-8a00-4a15-adf8-5ea90f5fe389?action=share&source=collection_link&creator=7964502"
+	},
+	"item": [
+		{
+			"name": "Sign-in",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"client_id\": \"{{client_id}}\",\r\n\"client_secret\": \"{{client_secret}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/authentication/sign_in",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"authentication",
+						"sign_in"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sign-out",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/authentication/sign_out",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"authentication",
+						"sign_out"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
