@@ -1,0 +1,145 @@
+{
+	"info": {
+		"_postman_id": "ee7ab526-b673-4985-8385-a42f3aa16750",
+		"name": "License Usage",
+		"description": "Select the \"SaaS ValueEdge\" environment and update the following fields:\n\n- url - in the format: [https://almoctane-xyz.saas.microfocus.com](https://almoctane-eur.saas.microfocus.com/)\n    \n- Generate the API Key and Secret and populate the relevant fields\n    \n- Populate the \"shared_space\" field\n    \n- Execute \"Sign-in\" to authenticate.\n    \n    - use \"license_usage\" to get the maximum number of licenses in concurrent use by day\n        \n    - use \"license_usage with dates\" to specify a date range\n        \n    - use \"installed_license\" to view the capacity of the currently installed licenses.\n        \n- Use \"Sign-out\" once you're ready to logout.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7964502",
+		"_collection_link": "https://almrest.postman.co/workspace/VE-examples-(shared)~8cb9ab17-4fa2-4c6a-98e7-be6f19d9bb1b/collection/7964502-ee7ab526-b673-4985-8385-a42f3aa16750?action=share&source=collection_link&creator=7964502"
+	},
+	"item": [
+		{
+			"name": "Sign-in",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"client_id\": \"{{client_id}}\",\r\n\"client_secret\": \"{{client_secret}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/authentication/sign_in",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"authentication",
+						"sign_in"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "license_usage",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "ALM-OCTANE-TECH-PREVIEW",
+						"value": "true",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/api/shared_spaces/{{shared_space}}/license_usage",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"shared_spaces",
+						"{{shared_space}}",
+						"license_usage"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "license_usage with dates",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "ALM-OCTANE-TECH-PREVIEW",
+						"value": "true",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/api/shared_spaces/{{shared_space}}/license_usage?start_date=2024-10-7&end_date=2024-10-11",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"shared_spaces",
+						"{{shared_space}}",
+						"license_usage"
+					],
+					"query": [
+						{
+							"key": "start_date",
+							"value": "2024-10-7"
+						},
+						{
+							"key": "end_date",
+							"value": "2024-10-11"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "installed_license",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "ALM-OCTANE-TECH-PREVIEW",
+						"value": "true",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/api/shared_spaces/{{shared_space}}/tenant_licenses",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"shared_spaces",
+						"{{shared_space}}",
+						"tenant_licenses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sign-out",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/authentication/sign_out",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"authentication",
+						"sign_out"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
